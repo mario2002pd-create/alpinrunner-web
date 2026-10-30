@@ -1,0 +1,101 @@
+
+/* ---------- Sub pages (mirrored content) ---------- */
+.page-hero .back{display:inline-block;margin-bottom:20px;font:500 .75rem/1 var(--mono);letter-spacing:.14em;text-transform:uppercase;text-decoration:none;border-bottom:1.5px solid var(--ink)}
+.prose-sec{padding-top:0}
+.prose{max-width:100%}
+.prose > *{max-width:100%}
+.prose p,.prose li,.prose td{max-width:78ch}
+.prose h2{font-size:clamp(1.8rem,4vw,3rem);margin:56px 0 18px}
+.prose h3{font-size:clamp(1.3rem,2.4vw,1.8rem);margin:32px 0 12px}
+.prose p{margin:0 0 1.1em}
+.prose a{color:var(--accent);text-underline-offset:3px}
+.prose ul,.prose ol{padding-left:1.2em;margin:0 0 1.2em}
+.prose strong{font-weight:700}
+.prose img{border-radius:16px;height:auto}
+.prose figure{margin:0 0 1.2em}
+.prose table{border-collapse:collapse;width:100%;margin:0 0 1.2em}
+.prose td,.prose th{padding:10px 12px;border-bottom:1.5px solid var(--line);text-align:left;vertical-align:top}
+.prose .info{font:500 .78rem/1 var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin:0 0 24px}
+.prose .rte{min-width:0}
+.prose iframe{max-width:100%}
+.cta-box{border:1.5px solid var(--line);border-radius:24px;background:var(--card);padding:28px;margin:32px 0;max-width:640px}
+.cta-box b{font:900 clamp(1.4rem,3vw,2rem)/1 var(--display);text-transform:uppercase;display:block;margin-bottom:12px}
+.cta-box p{margin:0 0 20px}
+.prose .btn,.cta-box .btn{color:#fff;text-decoration:none}
+.prose .btn.blue:hover{color:var(--accent)}
+
+/* accordions */
+details.acc{border-top:1.5px solid var(--line)}
+details.acc:last-of-type{border-bottom:1.5px solid var(--line)}
+details.acc > summary{cursor:pointer;list-style:none;padding:22px 0;font:900 clamp(1.4rem,3vw,2.2rem)/1 var(--display);text-transform:uppercase;display:flex;justify-content:space-between;align-items:center;gap:16px}
+details.acc > summary::-webkit-details-marker{display:none}
+details.acc > summary::after{content:"+";font:500 1.6rem/1 var(--mono);width:44px;height:44px;border:1.5px solid var(--ink);border-radius:50%;display:grid;place-items:center;flex:none}
+details.acc[open] > summary::after{content:"–"}
+.acc-body{padding:0 0 32px}
+
+/* event lists (agenda) */
+.mod_eventlist .event{display:grid;grid-template-columns:200px 1fr;gap:16px;padding:14px 0;border-bottom:1px solid rgba(18,18,18,.18);align-items:baseline}
+.mod_eventlist .event time{font:500 .8rem/1.4 var(--mono);letter-spacing:.06em;color:var(--muted)}
+.mod_eventlist .event a{font:900 1.2rem/1.15 var(--display);text-transform:uppercase;text-decoration:none;color:var(--ink)}
+.mod_eventlist .event a:hover{color:var(--accent)}
+.mod_eventlist .event.specialevent time{color:var(--accent);font-weight:700}
+.mod_eventlist .event.bygone a{color:var(--ink);opacity:.62}
+.mod_eventlist .event.bygone a:hover{opacity:1}
+
+/* route detail fields */
+.item .field,.layout_full .field{display:grid;grid-template-columns:220px 1fr;gap:12px;padding:12px 0;border-bottom:1px solid rgba(18,18,18,.18)}
+.field .label{font:500 .72rem/1.6 var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.field .value{min-width:0;overflow-wrap:anywhere}
+.field .value ul{list-style:none;padding:0;margin:0;display:flex;flex-wrap:wrap;gap:12px}
+.field .value img{border-radius:12px}
+.field.wegname{display:none}
+
+/* news feed */
+[data-kind="news-von-alpinrunners"] .content-text.media{display:grid;grid-template-columns:200px 1fr;gap:28px;padding:28px 0;border-top:1.5px solid var(--line);align-items:start}
+[data-kind="news-von-alpinrunners"] .content-text.media figure{margin:0}
+[data-kind="news-von-alpinrunners"] .content-text.media p:first-child{font:500 .78rem/1.4 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--accent)}
+.mod_newslist .layout_latest{margin-bottom:24px}
+
+/* shop / marktplatz */
+[data-kind="angebote"] .content-text.media,[data-kind="marktplatz"] .content-text.media,[data-kind="unsere-partner"] .content-text.media{display:grid;grid-template-columns:220px 1fr;gap:28px;padding:28px 0;border-top:1.5px solid var(--line);align-items:start}
+
+/* routes database */
+.filters{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:14px;align-items:end;margin-bottom:20px}
+.filters label{display:flex;flex-direction:column;gap:8px}
+.filters select,.filters input{font:300 .9rem var(--mono);background:var(--card);color:var(--ink);border:1.5px solid var(--line);border-radius:999px;padding:.8em 1.1em;width:100%;min-width:0}
+.count{font:500 .78rem/1 var(--mono);letter-spacing:.12em;text-transform:uppercase;margin:16px 0 24px}
+.routes{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:16px}
+.route{display:flex;flex-direction:column;gap:8px;border:1.5px solid var(--line);border-radius:22px;padding:22px;text-decoration:none;background:var(--card);transition:background .2s,transform .2s;min-width:0}
+.route:hover{background:#fff;transform:translateY(-3px)}
+.route .label{color:var(--accent)}
+.route h3{font-size:1.35rem;overflow-wrap:anywhere}
+.route p{margin:0;color:var(--muted);font-size:.85rem}
+.route .meta{font:500 .74rem/1.5 var(--mono);letter-spacing:.06em}
+.route .art{align-self:flex-start;margin-top:auto;font:500 .68rem/1 var(--mono);letter-spacing:.12em;text-transform:uppercase;background:var(--ink);color:var(--paper);border-radius:999px;padding:.5em .9em}
+.route[hidden]{display:none}
+.more-row{margin-top:32px;text-align:center}
+
+/* home slider */
+.slider{margin:0;position:relative;border-radius:28px;overflow:hidden;aspect-ratio:4/3;background:#e4dfd0}
+.slider img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity 1.4s ease}
+.slider img.on{opacity:1}
+.slider figcaption{position:absolute;left:0;right:0;bottom:0;padding:48px 22px 20px;color:#fff;font-size:.85rem;background:linear-gradient(0deg,rgba(0,0,0,.65),transparent)}
+.slider figcaption a{color:#fff;font-weight:700}
+.slider figcaption p{margin:0}
+
+/* lightbox */
+.lb{position:fixed;inset:0;z-index:100;background:rgba(10,10,10,.92);display:grid;place-items:center;padding:24px}
+.lb img{max-width:100%;max-height:100%;border-radius:12px}
+.lb button{position:absolute;top:16px;right:16px;border:1.5px solid #fff;background:transparent;color:#fff;border-radius:999px;padding:.6em 1.1em;font:500 .75rem var(--mono);letter-spacing:.12em;text-transform:uppercase;cursor:pointer}
+
+@media(max-width:900px){
+  .mod_eventlist .event{grid-template-columns:1fr;gap:4px}
+  .item .field,.layout_full .field{grid-template-columns:1fr;gap:4px}
+  [data-kind="news-von-alpinrunners"] .content-text.media,[data-kind="angebote"] .content-text.media,[data-kind="marktplatz"] .content-text.media,[data-kind="unsere-partner"] .content-text.media{grid-template-columns:1fr}
+}
+
+.page-hero h1{font-size:clamp(2rem,8vw,7rem);overflow-wrap:anywhere;hyphens:auto}
+.prose h2,.prose h3,.prose p,.prose li,.route h3{overflow-wrap:anywhere;hyphens:auto}
+.prose{overflow-wrap:anywhere}
+
+.nav .logo img{filter:none;mix-blend-mode:multiply}
